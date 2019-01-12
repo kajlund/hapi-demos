@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "env": {
+    "browser": false,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 2018,
+    "sourceType": "script",
+    "ecmaFeatures": {
+      "impliedStrict ": true
+    }
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error", {
+        "printWidth": 120,
+        "semi": false
+      }
+    ],
+    "no-unused-vars": [
+      "error", {
+        "vars": "all", "args": "after-used", "ignoreRestSiblings": true
+      }
+    ],
+    "no-console": "off"
+  }
+}
