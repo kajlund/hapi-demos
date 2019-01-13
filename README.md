@@ -23,3 +23,14 @@ Basic authorization sends username and password in the header with every request
 
 For cookie auth you can use the [hapi-auth-cookie](https://github.com/hapijs/hapi-auth-cookie) plugin. You can find a demo app in `src/auth/cookie/index.js`. The cookie scheme can, but is not obligated to, have a validate method. That method could be used for disallowing users with valid cookies if need be. Hapi's `request.auth` object provides the additional boolean attribute `isAuthenticated`. If isAuthenticated the `request.auth.credentials` will typically contain user data.
 
+## Logging
+
+Logging with Hapi is traditionally done using [Good](https://github.com/hapijs/good). The [good-file](https://github.com/hapijs/good-file) has been discontinued...
+
+A sample using Good is provided in `src/logging/good/index.js`.
+
+### ToDos
+
+* Document Hapi/Good process monitoring vs Logging
+* Provide alternative logger using Winston
+* Build plugin for using Winston logger for process monitoring/logging

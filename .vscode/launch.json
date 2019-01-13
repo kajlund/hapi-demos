@@ -15,6 +15,14 @@
             "request": "launch",
             "name": "Auth Cookie",
             "program": "${workspaceFolder}/src/auth/cookie/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Logging Good",
+            "program": "${workspaceFolder}/src/logging/good/index.js",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }
