@@ -27,6 +27,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "DB Mongoose",
+            "program": "${workspaceFolder}/src/db/mongoose/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Logging Good",
             "program": "${workspaceFolder}/src/logging/good/index.js",
             "console": "integratedTerminal",

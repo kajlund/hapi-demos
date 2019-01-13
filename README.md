@@ -23,6 +23,29 @@ Basic authorization sends username and password in the header with every request
 
 For cookie auth you can use the [hapi-auth-cookie](https://github.com/hapijs/hapi-auth-cookie) plugin. You can find a demo app in `src/auth/cookie/index.js`. The cookie scheme can, but is not obligated to, have a validate method. That method could be used for disallowing users with valid cookies if need be. Hapi's `request.auth` object provides the additional boolean attribute `isAuthenticated`. If isAuthenticated the `request.auth.credentials` will typically contain user data.
 
+## Databases
+
+### Mongoose Connection
+
+Sample demos how to connect to a MongoDB database using the Mongoose ODM. You can find it at `src/db/mongoose/index.js`.
+
+The sample adds the `db` section to config:
+
+```js
+db: {
+  uri: "$MONGODB_URI",
+  options: {
+    keepAlive: 300000,
+    connectTimeoutMS: 300000,
+    useNewUrlParser: true
+  }
+},
+```
+
+The uri value `$MONGODB_URI` intructs getconfig to read the environment variable `MONGODB_URI`. You can add something like `MONGODB_URI=mongodb://localhost:27017/Hapi-Demos` to a .env file in the project root dir.
+
+> TODOs: Could add a model or two and some samples on how to use Monggose.
+
 ## Logging
 
 Logging with Hapi is traditionally done using [Good](https://github.com/hapijs/good). The [good-file](https://github.com/hapijs/good-file) has been discontinued...

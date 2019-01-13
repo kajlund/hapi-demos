@@ -12,6 +12,14 @@ module.exports = {
     description: pack.description,
     version: pack.version
   },
+  db: {
+    uri: "$MONGODB_URI",
+    options: {
+      keepAlive: 300000,
+      connectTimeoutMS: 300000,
+      useNewUrlParser: true
+    }
+  },
   webserver: {
     cors: false, // Cross-Origin Resource Sharing ability (true/false)
     env: "$NODE_ENV",
