@@ -7,6 +7,14 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "_Server Template",
+            "program": "${workspaceFolder}/src/server-template.js",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Auth Basic",
             "program": "${workspaceFolder}/src/auth/basic/index.js"
         },
