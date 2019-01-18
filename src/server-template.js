@@ -4,6 +4,7 @@ const Path = require("path")
 
 const Glue = require("glue")
 const Config = require("getconfig")
+const Log = require("@attracs/logger-winston-configured")
 
 if (!Config.webserver) {
   throw new Error("No webserver configured")
@@ -36,41 +37,41 @@ const manifest = {
 
 const start = async () => {
   try {
-    console.log("Composing server...")
+    Log.info("Composing server...")
     server = await Glue.compose(
       manifest,
       { relativeTo: Path.join(__dirname, "modules") }
     )
-    console.log("Starting server...")
+    Log.info("Starting server...")
     await server.start()
-    console.log(`Server running at: ${server.info.uri}`)
+    Log.info(`Server running at: ${server.info.uri}`)
   } catch (err) {
-    console.error(err)
+    Log.error("Error starting server", err)
     process.exit(1)
   }
 }
 
-start()
-
 process.on("uncaughtException", err => {
-  console.error(err.stack)
+  Log.error("Uncaught Exception", err)
   process.exit(1)
 })
 
 process.on("unhandledRejection", reason => {
-  console.log("Unhandled Rejection at:", reason.stack || reason)
+  Log.error("Unhandled Rejection at:", reason.stack || reason)
   process.exit(1)
 })
 
 // listen on SIGINT signal and gracefully stop the server
 process.on("SIGINT", async () => {
-  console.log("Stopping hapi server")
+  Log.warn("SIGINT Signal Received - Stopping Server")
   try {
     await server.stop({ timeout: 10000 })
-    console.log("Hapi server stopped")
+    Log.warn("Hapi server stopped")
     process.exit(0)
   } catch (err) {
-    console.error(err.stack)
+    Log.error("Exception thrown trying to close server", err)
     process.exit(1)
   }
 })
+
+start()
