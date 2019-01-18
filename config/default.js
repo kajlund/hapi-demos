@@ -20,6 +20,19 @@ module.exports = {
       useNewUrlParser: true
     }
   },
+  logging: {
+    level: "warn",
+    timeformat: "YYYY-MM-DD HH:mm:ss",
+    console: {
+      use: true,
+      colorize: true,
+      level: "silly"
+    },
+    file: {
+      use: true,
+      level: "silly"
+    }
+  },
   webserver: {
     cors: false, // Cross-Origin Resource Sharing ability (true/false)
     env: "$NODE_ENV",

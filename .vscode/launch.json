@@ -37,6 +37,14 @@
             "program": "${workspaceFolder}/src/logging/good/index.js",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
-        }
-    ]
+        },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Logging Winston",
+      "program": "${workspaceFolder}/src/logging/winston-cnf/index.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
 }
