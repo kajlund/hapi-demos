@@ -26,7 +26,7 @@ const main = async () => {
       password: "password-should-be-32-characters",
       cookie: "sid-example",
       // redirectTo: '/login',
-      isSecure: false
+      isSecure: process.env.NODE_ENV === "production"
     })
 
     server.route({
