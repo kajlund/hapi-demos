@@ -1,48 +1,56 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "_Server Template",
-            "program": "${workspaceFolder}/src/server-template.js",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Auth Basic",
-            "program": "${workspaceFolder}/src/auth/basic/index.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Auth Cookie",
-            "program": "${workspaceFolder}/src/auth/cookie/index.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "DB Mongoose",
-            "program": "${workspaceFolder}/src/db/mongoose/index.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Logging Good",
-            "program": "${workspaceFolder}/src/logging/good/index.js",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "_Server Template",
+      "program": "${workspaceFolder}/src/server-template.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Auth Basic",
+      "program": "${workspaceFolder}/src/auth/basic/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Auth Cookie",
+      "program": "${workspaceFolder}/src/auth/cookie/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DB Mongoose",
+      "program": "${workspaceFolder}/src/db/mongoose/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Logging Good",
+      "program": "${workspaceFolder}/src/logging/good/index.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
     {
       "type": "node",
       "request": "launch",
       "name": "Logging Winston",
       "program": "${workspaceFolder}/src/logging/winston-cnf/index.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Templating Nuxt",
+      "program": "${workspaceFolder}/src/templating/nuxt/index.js",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }

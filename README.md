@@ -52,6 +52,12 @@ Logging with Hapi is traditionally done using [Good](https://github.com/hapijs/g
 
 A sample using Good is provided in `src/logging/good/index.js`.
 
+## Templating
+
+Weak area for me as I've always used Hapi to build REST endpoints for SPAs.
+
+A sample of using the [hapi-nuxt](https://github.com/nuxt-community/hapi-nuxt) plugin supporting the [Nuxt.js](https://nuxtjs.org/) Vue.js framework is found at `src/templating/nuxt/index.js`.
+
 ### ToDos
 
 * Document Hapi/Good process monitoring vs Logging
