@@ -49,6 +49,14 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Templating Handlebars",
+      "program": "${workspaceFolder}/src/templating/handlebars/index.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Templating Nuxt",
       "program": "${workspaceFolder}/src/templating/nuxt/index.js",
       "console": "integratedTerminal",

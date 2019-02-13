@@ -1,0 +1,20 @@
+<section class="uk-section">
+  <div class="uk-container">
+
+    <div class="notification">
+      <h1 class="title">{{pageTitle}}</h1>
+      <p>{{message}}</p>
+      {{! call test helper with option value}}
+      <p class="uk-text-success">{{isSparta "sparta"}}</p>
+      <p class="uk-text-danger">{{isSparta "whatever"}}</p>
+
+      {{#isAdmin}}
+        {{! show admin navigation}}
+        <p class="uk-text-warning">Only admins should see this.</p>
+      {{else}}
+        <p>You're not an admin</p>
+      {{/isAdmin}}
+      <a href="/whatever">The 404 page has different layout</a>
+    </div>
+  </div>
+</section>

@@ -56,6 +56,8 @@ A sample using Good is provided in `src/logging/good/index.js`.
 
 Weak area for me as I've always used Hapi to build REST endpoints for SPAs.
 
+A sample of using [Handlebars](https://handlebarsjs.com/) is found at `src/templating/handlebars/index.js`.
+
 A sample of using the [hapi-nuxt](https://github.com/nuxt-community/hapi-nuxt) plugin supporting the [Nuxt.js](https://nuxtjs.org/) Vue.js framework is found at `src/templating/nuxt/index.js`.
 
 ### ToDos
